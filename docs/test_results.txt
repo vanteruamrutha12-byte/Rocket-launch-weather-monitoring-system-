@@ -1,0 +1,17 @@
+test_custom_thresholds (test_safety_rules.TestEvaluate.test_custom_thresholds) ... ok
+test_multiple_reasons (test_safety_rules.TestEvaluate.test_multiple_reasons) ... ok
+test_safe_normal_conditions (test_safety_rules.TestEvaluate.test_safe_normal_conditions) ... ok
+test_unsafe_high_humidity (test_safety_rules.TestEvaluate.test_unsafe_high_humidity) ... ok
+test_unsafe_high_temperature (test_safety_rules.TestEvaluate.test_unsafe_high_temperature) ... ok
+test_unsafe_high_wind (test_safety_rules.TestEvaluate.test_unsafe_high_wind) ... ok
+test_unsafe_low_temperature (test_safety_rules.TestEvaluate.test_unsafe_low_temperature) ... ok
+test_values_exactly_at_limits_are_safe (test_safety_rules.TestEvaluate.test_values_exactly_at_limits_are_safe) ... ok
+test_boolean_value_raises (test_safety_rules.TestValidation.test_boolean_value_raises) ... ok
+test_humidity_out_of_range_raises (test_safety_rules.TestValidation.test_humidity_out_of_range_raises) ... ok
+test_negative_wind_raises (test_safety_rules.TestValidation.test_negative_wind_raises) ... ok
+test_text_value_raises (test_safety_rules.TestValidation.test_text_value_raises) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.001s
+
+OK
