@@ -5,7 +5,9 @@ Saves weather readings to a CSV file and reads them back.
 
 import csv
 import os
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
+
+IST = timezone(timedelta(hours=5, minutes=30))  # India time
 
 FIELDNAMES = ["timestamp", "source", "temperature",
               "humidity", "wind_speed", "status"]
@@ -27,7 +29,7 @@ def log_reading(filepath, source, temperature, humidity, wind_speed, status):
         if needs_header:
             writer.writeheader()
         writer.writerow({
-            "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+            "timestamp": datetime.now(IST).strftime("%Y-%m-%d %H:%M:%S"),
             "source": source,
             "temperature": temperature,
             "humidity": humidity,

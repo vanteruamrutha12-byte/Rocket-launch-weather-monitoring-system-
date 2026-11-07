@@ -1,2 +1,0 @@
-{'source': 'sample', 'temperature': 28.7, 'humidity': 88.0, 'wind_speed': 15.0}
-{'source': 'sample', 'temperature': 24.5, 'humidity': 62.0, 'wind_speed': 8.2}
