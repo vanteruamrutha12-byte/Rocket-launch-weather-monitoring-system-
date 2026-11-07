@@ -1,3 +1,14 @@
+test_format_and_limits (test_data_sources.TestEsp32Simulation.test_format_and_limits) ... ok
+test_bad_index_raises (test_data_sources.TestSampleSource.test_bad_index_raises) ... ok
+test_empty_file_raises (test_data_sources.TestSampleSource.test_empty_file_raises) ... ok
+test_first_row (test_data_sources.TestSampleSource.test_first_row) ... ok
+test_latest_row (test_data_sources.TestSampleSource.test_latest_row) ... ok
+test_next_sample_loops_back (test_data_sources.TestSampleSource.test_next_sample_loops_back) ... ok
+test_header_written_only_once (test_logger.TestLogger.test_header_written_only_once) ... ok
+test_history_values_are_numbers (test_logger.TestLogger.test_history_values_are_numbers) ... ok
+test_missing_file_gives_empty_list (test_logger.TestLogger.test_missing_file_gives_empty_list) ... ok
+test_run_logs_one_row_and_returns_status (test_main.TestRun.test_run_logs_one_row_and_returns_status) ... ok
+test_unknown_source_raises (test_main.TestRun.test_unknown_source_raises) ... ok
 test_custom_thresholds (test_safety_rules.TestEvaluate.test_custom_thresholds) ... ok
 test_multiple_reasons (test_safety_rules.TestEvaluate.test_multiple_reasons) ... ok
 test_safe_normal_conditions (test_safety_rules.TestEvaluate.test_safe_normal_conditions) ... ok
@@ -12,6 +23,6 @@ test_negative_wind_raises (test_safety_rules.TestValidation.test_negative_wind_r
 test_text_value_raises (test_safety_rules.TestValidation.test_text_value_raises) ... ok
 
 ----------------------------------------------------------------------
-Ran 12 tests in 0.001s
+Ran 23 tests in 0.021s
 
 OK
