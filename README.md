@@ -19,7 +19,7 @@ This project builds a small weather-monitoring system for learning embedded syst
 
 ## Hardware and Software Requirements
 
-**Hardware:** none required. The ESP32 is simulated in Wokwi, and the project was built entirely from an Android phone.
+**Hardware:** none required. The ESP32 is simulated in Wokwi.
 
 **Software and services (all free):**
 
