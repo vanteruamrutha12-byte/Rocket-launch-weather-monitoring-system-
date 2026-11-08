@@ -8,6 +8,7 @@ chosen by the user. It is NOT real launch guidance.
 
 from datetime import datetime
 
+import altair as alt
 import pandas as pd
 import streamlit as st
 
@@ -115,9 +116,21 @@ else:
         st.info("No logged readings for this source yet. Press Refresh reading.")
         st.stop()
     chart_data = chart_df.set_index("timestamp")
-    st.write("Temperature (C)")
-    st.line_chart(chart_data["temperature"])
-    st.write("Humidity (%)")
-    st.line_chart(chart_data["humidity"])
-    st.write("Wind speed (km/h)")
-    st.line_chart(chart_data["wind_speed"])
+    for column, title in (("temperature", "Temperature (C)"),
+                          ("humidity", "Humidity (%)"),
+                          ("wind_speed", "Wind speed (km/h)")):
+        st.write(title)
+        low = float(chart_data[column].min())
+        high = float(chart_data[column].max())
+        pad = max((high - low) * 0.1, 1.0)
+        chart = (
+            alt.Chart(chart_data.reset_index())
+            .mark_line(point=True)
+            .encode(
+                x=alt.X("timestamp:N", title="Time", axis=alt.Axis(labelAngle=-45)),
+                y=alt.Y(f"{column}:Q", title=title,
+                        scale=alt.Scale(domain=[low - pad, high + pad])),
+                tooltip=["timestamp", column],
+            )
+        )
+        st.altair_chart(chart, use_container_width=True)
