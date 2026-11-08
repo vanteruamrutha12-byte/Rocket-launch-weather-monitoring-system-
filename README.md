@@ -102,7 +102,7 @@ Dashboard screenshots are stored in `docs/screenshots/`.
 
 
 
-![Dashboard](docs/screenshots/dashboard_1.jpg)
+![Dashboard](docs/screenshots/dashboard_1.png)
 
 
 
